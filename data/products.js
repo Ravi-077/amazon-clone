@@ -1,4 +1,38 @@
-const products = [
+export function getProduct(productId)
+{
+  let matchingProduct;
+      products.forEach((product)=>
+      {
+          if(product.id===productId)
+          {
+           matchingProduct=product;
+          }   
+       });
+       return matchingProduct;
+}
+
+// export function loadProducts()
+// {
+//   let xhr=new XMLHttpRequest();
+
+//   xhr.addEventListener('load',()=>{
+//    let JSON.parse(xhr.response).map((productDetails) => {
+//     if(productDetails.type ==='clothing'){
+//       return new Clothing(productDetails);
+//     }
+//     return new Product(productDetails);
+//    });
+//    console.log('load products');
+
+//   xhr.open('GET','https://supersimplebackend.dev/products.js');
+//   xhr.send();
+// })
+// }
+
+// loadProducts();
+
+
+export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
